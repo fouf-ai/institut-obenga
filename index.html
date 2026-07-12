@@ -27,18 +27,14 @@
             grayLight: '#F3F4F6'
           },
           fontFamily: { 
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            serif: ['Merriweather', 'Georgia', 'serif'],
+            /* Remplacement par Times New Roman pour tout le site */
+            sans: ['"Times New Roman"', 'Times', 'serif'],
+            serif: ['"Times New Roman"', 'Times', 'serif'],
           },
         },
       },
     }
   </script>
-
-  <!-- ═══ GOOGLE FONTS ═══ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" />
 
   <style>
     html { scroll-behavior: smooth; }
@@ -50,7 +46,8 @@
     .dropdown:hover .dropdown-content { display: block; }
   </style>
 </head>
-<body class="bg-white text-primary font-sans">
+<!-- Application de la taille 17px (équivalent web ~ 12.5pt/13pt) -->
+<body class="bg-white text-primary font-sans text-[17px]">
 
   <!-- ═══════════════════════════════════════
        EN-TÊTE (STYLE CFR)
@@ -58,7 +55,7 @@
   <header id="top" class="bg-white border-b-4 border-primary sticky top-0 z-50 shadow-sm">
     
     <!-- 1. Barre utilitaire supérieure (Top Bar) -->
-    <div class="bg-primary text-white text-xs py-1.5 px-6 flex justify-between items-center tracking-widest uppercase">
+    <div class="bg-primary text-white text-sm py-1.5 px-6 flex justify-between items-center tracking-widest uppercase">
       <span class="hidden sm:inline-block">Organisation indépendante, non partisane et à but non lucratif</span>
       <span class="sm:hidden">Institut Indépendant</span>
       
@@ -80,10 +77,10 @@
       <a href="#top" class="flex items-center gap-4">
         <img src="Logo_2.jpeg" alt="Logo Institut Théophile Obenga" class="h-16 w-16 object-contain rounded-full border border-primary" />
         <div class="flex flex-col">
-          <span class="text-primary font-serif font-black text-xl md:text-2xl leading-none uppercase tracking-tight">
+          <span class="text-primary font-bold text-2xl md:text-3xl leading-none uppercase tracking-tight">
             Institut Théophile Obenga
           </span>
-          <span class="text-xs font-sans font-bold tracking-[0.15em] opacity-80 mt-1 uppercase">
+          <span class="text-sm font-bold tracking-[0.15em] opacity-80 mt-1 uppercase">
             Des Relations Internationales
           </span>
         </div>
@@ -98,7 +95,7 @@
     </div>
 
     <!-- 3. Navigation Principale (Menu CFR Style - Desktop) -->
-    <nav class="hidden lg:flex max-w-7xl mx-auto px-6 items-center justify-between font-bold uppercase text-[13px] tracking-widest relative">
+    <nav class="hidden lg:flex max-w-7xl mx-auto px-6 items-center justify-between font-bold uppercase text-[14px] tracking-widest relative">
       
       <!-- Onglet Régions -->
       <div class="dropdown group py-4">
@@ -107,7 +104,7 @@
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
         </button>
         <div class="dropdown-content absolute left-0 top-full w-64 bg-white border-t-2 border-primary shadow-xl z-50 pb-2">
-          <ul class="text-primary capitalize tracking-normal text-sm font-medium">
+          <ul class="text-primary capitalize tracking-normal text-[16px] font-medium">
             <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Afrique Centrale</a></li>
             <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Afrique de l'Ouest</a></li>
             <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Moyen-Orient & Nord</a></li>
@@ -125,7 +122,9 @@
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
         </button>
         <div class="dropdown-content absolute left-40 top-full w-72 bg-white border-t-2 border-primary shadow-xl z-50 pb-2">
-          <ul class="text-primary capitalize tracking-normal text-sm font-medium">
+          <ul class="text-primary capitalize tracking-normal text-[16px] font-medium">
+            <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Diplomatie</a></li>
+            <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Géopolitique et sécurité</a></li>
             <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Défense & Sécurité</a></li>
             <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Économie & Développement</a></li>
             <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Gouvernance Globale</a></li>
@@ -142,10 +141,13 @@
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
         </button>
         <div class="dropdown-content absolute left-80 top-full w-64 bg-white border-t-2 border-primary shadow-xl z-50 pb-2">
-          <ul class="text-primary capitalize tracking-normal text-sm font-medium">
+          <ul class="text-primary capitalize tracking-normal text-[16px] font-medium">
             <li><a href="#publications" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Notes d'Orientation</a></li>
             <li><a href="#publications" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Rapports de Recherche</a></li>
             <li><a href="#publications" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Revues & Analyses</a></li>
+            <li><a href="#publications" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Books</a></li>
+            <li><a href="#publications" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Podcasts</a></li>
+            <li><a href="#publications" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Global perspectives Lectures</a></li>
           </ul>
         </div>
       </div>
@@ -157,10 +159,10 @@
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
         </button>
         <div class="dropdown-content absolute right-80 top-full w-64 bg-white border-t-2 border-primary shadow-xl z-50 pb-2">
-          <ul class="text-primary capitalize tracking-normal text-sm font-medium">
+          <ul class="text-primary capitalize tracking-normal text-[16px] font-medium">
             <li><a href="#institut" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Conseil d'Administration</a></li>
             <li><a href="#institut" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Direction Exécutive</a></li>
-            <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Chercheurs Associés</a></li>
+            <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Fellow Researchers</a></li>
           </ul>
         </div>
       </div>
@@ -172,7 +174,7 @@
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
         </button>
         <div class="dropdown-content absolute right-40 top-full w-64 bg-white border-t-2 border-primary shadow-xl z-50 pb-2">
-          <ul class="text-primary capitalize tracking-normal text-sm font-medium">
+          <ul class="text-primary capitalize tracking-normal text-[16px] font-medium">
             <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">À Venir</a></li>
             <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Conférences Majeures</a></li>
             <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Archives Vidéos</a></li>
@@ -187,7 +189,7 @@
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
         </button>
         <div class="dropdown-content absolute right-0 top-full w-72 bg-white border-t-2 border-primary shadow-xl z-50 pb-2">
-          <ul class="text-primary capitalize tracking-normal text-sm font-medium">
+          <ul class="text-primary capitalize tracking-normal text-[16px] font-medium">
             <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Prospective Stratégique</a></li>
             <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Diplomatie Africaine 2050</a></li>
             <li><a href="#" class="block px-6 py-2.5 hover:bg-grayLight hover:text-primary">Nouvelles Alliances Mondiales</a></li>
@@ -227,10 +229,10 @@
         <span class="text-primary font-bold uppercase tracking-[0.2em] text-sm">
           Analyse & Diplomatie
         </span>
-        <h1 class="text-4xl md:text-6xl font-serif font-black leading-tight text-primary">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary">
           L'Avenir de la stratégie et du développement économique.
         </h1>
-        <p class="text-primary/80 text-lg md:text-xl font-light max-w-3xl leading-relaxed mt-2">
+        <p class="text-primary/80 text-xl font-light max-w-3xl leading-relaxed mt-2">
           L'Institut Théophile Obenga des Relations Internationales est une organisation indépendante, non partisane et à but non lucratif. Nous produisons des recherches rigoureuses pour éclairer les décideurs d'aujourd'hui et de demain.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 mt-8">
@@ -252,44 +254,45 @@
   </section>
 
   <!-- ═══════════════════════════════════════
-       SECTION EXPERTS & GOUVERNANCE
+       SECTION À PROPOS & GOUVERNANCE
   ════════════════════════════════════════ -->
-  <section id="institut" class="py-20 bg-grayLight">
+  <section id="about" class="py-20 bg-grayLight">
     <div class="max-w-7xl mx-auto px-6">
       
       <div class="border-editorial mb-12 pt-6">
-        <span class="uppercase font-bold tracking-widest text-xs text-primary/60 block mb-2">Experts & Organisation</span>
-        <h2 class="text-3xl md:text-4xl font-serif font-black text-primary">Gouvernance de l'Institut</h2>
+        <span class="uppercase font-bold tracking-widest text-sm text-primary/60 block mb-2">À Propos & Organisation</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary">Gouvernance de l'Institut</h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-16">
         <div>
-          <p class="text-primary/80 leading-relaxed text-lg mb-6 font-serif">
-            L'adhésion à notre institut est ouverte à toute personne physique ou morale partageant nos objectifs et nos valeurs. Les membres s'engagent à agir avec intégrité, professionnalisme et rigueur académique.
+          <!-- Nouveau texte À propos -->
+          <p class="text-primary/90 leading-relaxed text-[19px] mb-6">
+            L'Institut Théophile Obenga des Relations Internationales est un think tank indépendant consacré à la recherche, à l'analyse stratégique et à la diplomatie en Afrique centrale.
           </p>
           <p class="text-primary/80 leading-relaxed mb-8">
-            Afin de préserver notre neutralité institutionnelle, nous interdisons formellement l'utilisation de l'Institut à des fins partisanes ou politiques.
+            Afin de préserver notre neutralité institutionnelle, nous interdisons formellement l'utilisation de l'Institut à des fins partisanes ou politiques. L'adhésion à notre institut est ouverte à toute personne physique ou morale partageant nos objectifs.
           </p>
         </div>
 
-        <div class="grid gap-6">
+        <div id="institut" class="grid gap-6">
           
           <!-- Conseil d'administration -->
           <div class="border border-primary p-6 bg-white hover:shadow-xl transition-shadow flex flex-col sm:flex-row gap-6 items-start">
             <img src="Ignace Lokouako.jpeg" alt="Ignace Lokouako" class="w-28 h-28 rounded-full object-cover border-2 border-primary shadow-sm shrink-0" />
             <div class="flex-1">
-              <h3 class="font-serif font-bold text-xl mb-4 text-primary">Conseil d'Administration</h3>
-              <ul class="space-y-3 text-sm text-primary/80 leading-relaxed">
+              <h3 class="font-bold text-2xl mb-4 text-primary">Conseil d'Administration</h3>
+              <ul class="space-y-4 text-[17px] text-primary/90 leading-relaxed">
                 <li class="flex items-start gap-2">
-                  <span class="text-primary mt-0.5">▪</span>
+                  <span class="text-primary mt-1">▪</span>
                   <span><strong>Ignace Lokouako</strong>, Président de l’Institut Theophile Obenga</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-primary mt-0.5">▪</span>
+                  <span class="text-primary mt-1">▪</span>
                   <span>Directeur Administratif et financier, DGCMP.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-primary mt-0.5">▪</span>
+                  <span class="text-primary mt-1">▪</span>
                   <span>Directeur du département Union Africaine, Ministère des Affaires étrangères, Congo.</span>
                 </li>
               </ul>
@@ -298,22 +301,22 @@
 
           <!-- Direction exécutive -->
           <div class="border border-primary p-6 bg-primary text-white hover:shadow-xl transition-shadow">
-            <h3 class="font-serif font-bold text-xl mb-4">Direction exécutive</h3>
-            <ul class="space-y-3 text-sm text-white/90 leading-relaxed">
+            <h3 class="font-bold text-2xl mb-4">Direction exécutive</h3>
+            <ul class="space-y-4 text-[17px] text-white/90 leading-relaxed">
               <li class="flex items-start gap-2">
-                <span class="text-white/60 mt-0.5">▪</span>
+                <span class="text-white/60 mt-1">▪</span>
                 <span>Président and Director of Policy analysis</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-white/60 mt-0.5">▪</span>
+                <span class="text-white/60 mt-1">▪</span>
                 <span>Vice-President and Chief Digital content</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-white/60 mt-0.5">▪</span>
+                <span class="text-white/60 mt-1">▪</span>
                 <span>Vice-President, Chief Financial Officer</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-white/60 mt-0.5">▪</span>
+                <span class="text-white/60 mt-1">▪</span>
                 <span>Vice-President, Chief Development</span>
               </li>
             </ul>
@@ -330,33 +333,33 @@
   <section id="publications" class="py-20 bg-primary text-white">
     <div class="max-w-7xl mx-auto px-6">
       <div class="border-t-4 border-white mb-12 pt-6">
-        <span class="uppercase tracking-widest text-xs font-bold opacity-80 block mb-2">Travaux Récents</span>
-        <h2 class="text-3xl md:text-4xl font-serif font-black">Recherche & Publications</h2>
+        <span class="uppercase tracking-widest text-sm font-bold opacity-80 block mb-2">Travaux Récents</span>
+        <h2 class="text-3xl md:text-4xl font-bold">Recherche & Publications</h2>
       </div>
 
-      <p class="max-w-3xl text-lg opacity-90 mb-12 font-serif leading-relaxed">
+      <p class="max-w-3xl text-[19px] opacity-90 mb-12 leading-relaxed">
         Nos activités de recherche sont menées en toute indépendance intellectuelle. Toutes nos publications respectent la rigueur scientifique, la vérification des faits et la transparence méthodologique.
       </p>
 
       <div class="grid md:grid-cols-3 gap-0 border-l border-t border-white/20">
         <div class="border-r border-b border-white/20 p-8 hover:bg-white hover:text-primary transition-colors group cursor-pointer">
-          <span class="text-xs uppercase tracking-widest font-bold opacity-60 group-hover:text-primary/60 mb-4 block">Format</span>
-          <h3 class="font-serif font-bold text-2xl mb-4 group-hover:text-primary">Notes d'orientation & Politique</h3>
-          <p class="text-sm opacity-80 group-hover:text-primary/80 leading-relaxed">
+          <span class="text-sm uppercase tracking-widest font-bold opacity-60 group-hover:text-primary/60 mb-4 block">Format</span>
+          <h3 class="font-bold text-2xl mb-4 group-hover:text-primary">Notes d'orientation & Politique</h3>
+          <p class="opacity-80 group-hover:text-primary/80 leading-relaxed">
             Production de notes d'orientation politique et de notes de politique publique destinées aux décideurs gouvernementaux et institutionnels.
           </p>
         </div>
         <div class="border-r border-b border-white/20 p-8 hover:bg-white hover:text-primary transition-colors group cursor-pointer">
-          <span class="text-xs uppercase tracking-widest font-bold opacity-60 group-hover:text-primary/60 mb-4 block">Format</span>
-          <h3 class="font-serif font-bold text-2xl mb-4 group-hover:text-primary">Rapports de Recherche</h3>
-          <p class="text-sm opacity-80 group-hover:text-primary/80 leading-relaxed">
+          <span class="text-sm uppercase tracking-widest font-bold opacity-60 group-hover:text-primary/60 mb-4 block">Format</span>
+          <h3 class="font-bold text-2xl mb-4 group-hover:text-primary">Rapports de Recherche</h3>
+          <p class="opacity-80 group-hover:text-primary/80 leading-relaxed">
             Publication régulière de rapports de recherche de format mensuel et annuel sur les enjeux stratégiques et économiques majeurs.
           </p>
         </div>
         <div class="border-r border-b border-white/20 p-8 hover:bg-white hover:text-primary transition-colors group cursor-pointer">
-          <span class="text-xs uppercase tracking-widest font-bold opacity-60 group-hover:text-primary/60 mb-4 block">Format</span>
-          <h3 class="font-serif font-bold text-2xl mb-4 group-hover:text-primary">Revues & Analyses</h3>
-          <p class="text-sm opacity-80 group-hover:text-primary/80 leading-relaxed">
+          <span class="text-sm uppercase tracking-widest font-bold opacity-60 group-hover:text-primary/60 mb-4 block">Format</span>
+          <h3 class="font-bold text-2xl mb-4 group-hover:text-primary">Revues & Analyses</h3>
+          <p class="opacity-80 group-hover:text-primary/80 leading-relaxed">
             Édition de revues académiques, ainsi que des analyses et briefings internationaux portant sur la géopolitique globale.
           </p>
         </div>
@@ -371,8 +374,8 @@
     <div class="max-w-7xl mx-auto px-6">
       
       <div class="border-editorial mb-12 pt-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-serif font-black text-primary mb-4">Adhérer à l'Institut</h2>
-        <p class="text-primary/80 text-lg max-w-2xl mx-auto font-serif">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Adhérer à l'Institut</h2>
+        <p class="text-primary/80 text-[19px] max-w-2xl mx-auto">
           Vos cotisations soutiennent exclusivement notre fonctionnement administratif, nos recherches et l'organisation d'événements scientifiques.
         </p>
       </div>
@@ -381,40 +384,40 @@
         <!-- Membre Ordinaire -->
         <div class="bg-grayLight border border-primary/20 p-8 flex flex-col">
           <h3 class="font-bold uppercase tracking-widest text-sm text-primary mb-4">Membre Ordinaire</h3>
-          <div class="text-4xl font-serif font-bold text-primary mb-1">10 000 <span class="text-base font-sans font-normal uppercase tracking-wide">FCFA / an</span></div>
-          <p class="text-xs text-primary/60 mb-8 border-b border-primary/10 pb-4 font-bold">Cotisation annuelle</p>
-          <ul class="flex flex-col gap-4 text-sm text-primary/90 flex-1 mb-8">
+          <div class="text-4xl font-bold text-primary mb-1">10 000 <span class="text-lg font-normal uppercase tracking-wide">FCFA / an</span></div>
+          <p class="text-sm text-primary/60 mb-8 border-b border-primary/10 pb-4 font-bold">Cotisation annuelle</p>
+          <ul class="flex flex-col gap-4 text-primary/90 flex-1 mb-8">
             <li class="flex gap-3"><span class="text-primary font-bold">✓</span> Vote en Assemblée générale</li>
             <li class="flex gap-3"><span class="text-primary font-bold">✓</span> Réception des publications et rapports</li>
             <li class="flex gap-3"><span class="text-primary font-bold">✓</span> Accès aux événements de l'Institut</li>
           </ul>
-          <a href="#contact" class="w-full text-center border-2 border-primary text-primary font-bold uppercase tracking-wide text-xs py-4 hover:bg-primary hover:text-white transition-colors">Rejoindre</a>
+          <a href="#contact" class="w-full text-center border-2 border-primary text-primary font-bold uppercase tracking-wide text-sm py-4 hover:bg-primary hover:text-white transition-colors">Rejoindre</a>
         </div>
 
         <!-- Comité Exécutif -->
         <div class="bg-primary border border-primary p-8 flex flex-col text-white shadow-2xl transform md:-translate-y-4">
           <h3 class="font-bold uppercase tracking-widest text-sm mb-4">Membre du Comité Exécutif</h3>
-          <div class="text-4xl font-serif font-bold mb-1">15 000 <span class="text-base font-sans font-normal uppercase tracking-wide">FCFA</span></div>
-          <p class="text-xs text-white/60 mb-8 border-b border-white/20 pb-4 font-bold">Cotisation statutaire des dirigeants</p>
-          <ul class="flex flex-col gap-4 text-sm text-white/90 flex-1 mb-8">
+          <div class="text-4xl font-bold mb-1">15 000 <span class="text-lg font-normal uppercase tracking-wide">FCFA</span></div>
+          <p class="text-sm text-white/60 mb-8 border-b border-white/20 pb-4 font-bold">Cotisation statutaire des dirigeants</p>
+          <ul class="flex flex-col gap-4 text-white/90 flex-1 mb-8">
             <li class="flex gap-3"><span class="font-bold">✓</span> Gestion opérationnelle de l'Institut</li>
             <li class="flex gap-3"><span class="font-bold">✓</span> Mise en œuvre des décisions stratégiques</li>
             <li class="flex gap-3"><span class="font-bold">✓</span> Présence aux réunions obligatoires</li>
           </ul>
-          <a href="#contact" class="w-full text-center bg-white text-primary font-bold uppercase tracking-wide text-xs py-4 hover:bg-gray-100 transition-colors">Nous contacter</a>
+          <a href="#contact" class="w-full text-center bg-white text-primary font-bold uppercase tracking-wide text-sm py-4 hover:bg-gray-100 transition-colors">Nous contacter</a>
         </div>
 
         <!-- Membre Honoraire -->
         <div class="bg-grayLight border border-primary/20 p-8 flex flex-col">
           <h3 class="font-bold uppercase tracking-widest text-sm text-primary mb-4">Membre Honoraire</h3>
-          <div class="text-4xl font-serif font-bold text-primary mb-1">10 000 <span class="text-base font-sans font-normal uppercase tracking-wide">FCFA</span></div>
-          <p class="text-xs text-primary/60 mb-8 border-b border-primary/10 pb-4 font-bold">Soutien institutionnel</p>
-          <ul class="flex flex-col gap-4 text-sm text-primary/90 flex-1 mb-8">
+          <div class="text-4xl font-bold text-primary mb-1">10 000 <span class="text-lg font-normal uppercase tracking-wide">FCFA</span></div>
+          <p class="text-sm text-primary/60 mb-8 border-b border-primary/10 pb-4 font-bold">Soutien institutionnel</p>
+          <ul class="flex flex-col gap-4 text-primary/90 flex-1 mb-8">
             <li class="flex gap-3"><span class="text-primary font-bold">✓</span> Titre honorifique de l'Institut</li>
             <li class="flex gap-3"><span class="text-primary font-bold">✓</span> Accès privilégié aux travaux de recherche</li>
             <li class="flex gap-3"><span class="text-primary font-bold">✓</span> Participation aux assemblées</li>
           </ul>
-          <a href="#contact" class="w-full text-center border-2 border-primary text-primary font-bold uppercase tracking-wide text-xs py-4 hover:bg-primary hover:text-white transition-colors">Rejoindre</a>
+          <a href="#contact" class="w-full text-center border-2 border-primary text-primary font-bold uppercase tracking-wide text-sm py-4 hover:bg-primary hover:text-white transition-colors">Rejoindre</a>
         </div>
       </div>
     </div>
@@ -426,19 +429,19 @@
   <section id="contact" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6 border-editorial pt-12 grid md:grid-cols-2 gap-16">
       <div>
-        <h2 class="text-3xl font-serif font-black text-primary mb-6">Nous Contacter</h2>
-        <p class="text-primary/80 mb-8 leading-relaxed font-serif">
+        <h2 class="text-3xl font-bold text-primary mb-6">Nous Contacter</h2>
+        <p class="text-primary/80 mb-8 leading-relaxed">
           Pour régler vos cotisations, poser une candidature d'adhésion ou obtenir l'un de nos rapports de recherche.
         </p>
         
         <div class="space-y-4 text-primary">
           <div class="flex items-start gap-4 border-b border-primary/10 pb-4">
-            <span class="font-bold uppercase tracking-widest text-xs w-24 pt-1">Adresse</span>
-            <span class="font-serif">République du Congo</span>
+            <span class="font-bold uppercase tracking-widest text-sm w-24 pt-1">Adresse</span>
+            <span>République du Congo</span>
           </div>
           <div class="flex items-start gap-4 pt-2">
-            <span class="font-bold uppercase tracking-widest text-xs w-24 pt-1">Téléphone</span>
-            <a href="tel:+242065892632" class="hover:underline font-serif text-xl font-bold">+242 06 589 26 32</a>
+            <span class="font-bold uppercase tracking-widest text-sm w-24 pt-1">Téléphone</span>
+            <a href="tel:+242065892632" class="hover:underline text-2xl font-bold">+242 06 589 26 32</a>
           </div>
         </div>
       </div>
@@ -446,23 +449,23 @@
       <form class="space-y-6 bg-grayLight p-8 border border-primary/10" onsubmit="return false;">
         <div class="grid grid-cols-2 gap-6">
           <div class="space-y-2">
-            <label class="text-xs font-bold uppercase tracking-widest text-primary">Prénom</label>
+            <label class="text-sm font-bold uppercase tracking-widest text-primary">Prénom</label>
             <input type="text" class="w-full border-b-2 border-primary/30 py-2 focus:outline-none focus:border-primary text-primary bg-transparent" />
           </div>
           <div class="space-y-2">
-            <label class="text-xs font-bold uppercase tracking-widest text-primary">Nom</label>
+            <label class="text-sm font-bold uppercase tracking-widest text-primary">Nom</label>
             <input type="text" class="w-full border-b-2 border-primary/30 py-2 focus:outline-none focus:border-primary text-primary bg-transparent" />
           </div>
         </div>
         <div class="space-y-2">
-            <label class="text-xs font-bold uppercase tracking-widest text-primary">Email</label>
+            <label class="text-sm font-bold uppercase tracking-widest text-primary">Email</label>
             <input type="email" class="w-full border-b-2 border-primary/30 py-2 focus:outline-none focus:border-primary text-primary bg-transparent" />
         </div>
         <div class="space-y-2">
-            <label class="text-xs font-bold uppercase tracking-widest text-primary">Message</label>
+            <label class="text-sm font-bold uppercase tracking-widest text-primary">Message</label>
             <textarea rows="4" class="w-full border-b-2 border-primary/30 py-2 focus:outline-none focus:border-primary text-primary bg-transparent resize-none"></textarea>
         </div>
-        <button type="submit" class="bg-primary text-white font-bold uppercase tracking-widest text-xs px-8 py-4 hover:bg-primary/90 transition-colors w-full sm:w-auto">
+        <button type="submit" class="bg-primary text-white font-bold uppercase tracking-widest text-sm px-8 py-4 hover:bg-primary/90 transition-colors w-full sm:w-auto">
           Envoyer la demande
         </button>
       </form>
@@ -478,9 +481,9 @@
       <div class="md:col-span-2 space-y-6">
         <div class="flex items-center gap-4">
           <img src="Logo_2.jpeg" alt="Logo" class="h-12 w-12 object-contain rounded-full bg-white p-1" />
-          <h2 class="font-serif font-black text-xl uppercase tracking-widest">ITO</h2>
+          <h2 class="font-bold text-2xl uppercase tracking-widest">ITO</h2>
         </div>
-        <p class="text-white/70 max-w-sm text-sm leading-relaxed">
+        <p class="text-white/70 max-w-sm leading-relaxed">
           Institut Théophile Obenga des Relations Internationales.<br>
           Organisation indépendante, non partisane et à but non lucratif. Gestion financière reposant sur la transparence, la traçabilité des ressources et un audit régulier.
         </p>
@@ -495,8 +498,8 @@
       </div>
 
       <div class="space-y-6">
-        <h4 class="font-bold uppercase tracking-widest text-xs border-b border-white/20 pb-3">Navigation</h4>
-        <ul class="space-y-4 text-white/70 text-sm font-medium">
+        <h4 class="font-bold uppercase tracking-widest text-sm border-b border-white/20 pb-3">Navigation</h4>
+        <ul class="space-y-4 text-white/70 font-medium">
           <li><a href="#top" class="hover:text-white transition-colors">Accueil</a></li>
           <li><a href="#about" class="hover:text-white transition-colors">À propos</a></li>
           <li><a href="#publications" class="hover:text-white transition-colors">Recherche & Publications</a></li>
@@ -506,8 +509,8 @@
       </div>
 
       <div class="space-y-6">
-        <h4 class="font-bold uppercase tracking-widest text-xs border-b border-white/20 pb-3">Membres</h4>
-        <ul class="space-y-4 text-white/70 text-sm font-medium">
+        <h4 class="font-bold uppercase tracking-widest text-sm border-b border-white/20 pb-3">Membres</h4>
+        <ul class="space-y-4 text-white/70 font-medium">
           <li>Membres ordinaires</li>
           <li>Membres du Comité Exécutif</li>
           <li>Membres Honoraires</li>
@@ -517,7 +520,7 @@
     </div>
 
     <div class="border-t border-white/10 bg-black/10">
-      <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-xs text-white/50 gap-4 uppercase tracking-wider font-bold">
+      <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/50 gap-4 uppercase tracking-wider font-bold">
         <p>&copy; 2026 Institut Théophile Obenga. Tous droits réservés.</p>
         <p>Brazzaville, République du Congo</p>
       </div>
